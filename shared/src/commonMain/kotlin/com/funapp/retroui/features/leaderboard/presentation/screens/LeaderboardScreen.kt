@@ -67,7 +67,7 @@ fun LeaderboardScreen(
                     text = stringResource(Res.string.screen_leaderboard_title),
                     style = RetroTheme.typography.heading,
                     color = RetroTheme.colors.textPrimary,
-                    modifier = Modifier.retroEntrance(style = RetroEntranceStyle.Stomp),
+                    modifier = Modifier.retroEntrance(style = RetroEntranceStyle.Stomp, delayMillis = 0),
                 )
                 RetroText(
                     text = stringResource(Res.string.screen_leaderboard_subtitle),
@@ -75,7 +75,7 @@ fun LeaderboardScreen(
                     color = RetroTheme.colors.textSecondary,
                     modifier = Modifier.retroEntrance(
                         style = RetroEntranceStyle.Stomp,
-                        delayMillis = 80,
+                        delayMillis = 60,
                     ),
                 )
             }
@@ -104,7 +104,7 @@ fun LeaderboardScreen(
                     .padding(top = RetroTheme.spacing.sm)
                     .retroEntrance(
                         style = RetroEntranceStyle.Pop,
-                        delayMillis = index * 40,
+                        delayMillis = 160 + index * 40,
                     ),
             )
         }

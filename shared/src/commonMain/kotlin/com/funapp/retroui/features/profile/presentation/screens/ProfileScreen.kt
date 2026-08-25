@@ -55,7 +55,7 @@ fun ProfileScreen(
 
     RetroScreen(modifier = modifier) {
         item {
-            Column(modifier = Modifier.retroEntrance(delayMillis = 0)) {
+            Column(modifier = Modifier.retroEntrance(style = RetroEntranceStyle.Rise, delayMillis = 0)) {
                 RetroText(
                     text = stringResource(Res.string.screen_profile_title),
                     style = RetroTheme.typography.heading,
@@ -72,7 +72,7 @@ fun ProfileScreen(
             Spacer(modifier = Modifier.height(RetroTheme.spacing.lg))
         }
         item {
-            ProfileBanner(modifier = Modifier.retroEntrance(delayMillis = 60))
+            ProfileBanner(modifier = Modifier.retroEntrance(style = RetroEntranceStyle.Rise, delayMillis = 60))
         }
         item {
             Spacer(modifier = Modifier.height(RetroTheme.spacing.lg))
@@ -127,7 +127,7 @@ fun ProfileScreen(
         item {
             RetroSection(
                 title = stringResource(Res.string.profile_records_title),
-                modifier = Modifier.retroEntrance(delayMillis = 240),
+                modifier = Modifier.retroEntrance(style = RetroEntranceStyle.Rise, delayMillis = 240),
             ) {
                 RecordRow(
                     label = stringResource(Res.string.profile_record_streak),
